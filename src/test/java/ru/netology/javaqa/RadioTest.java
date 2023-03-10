@@ -1,17 +1,19 @@
 package ru.netology.javaqa;
 
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class RadioTest {
     @Test
-    void setCurrentStation () {
+    void setCurrentStation() {
         Radio radio = new Radio();
         int currentStation = -2;
         radio.setCurrentRadioStation(currentStation);
         int expected = 0;
         assertEquals(expected, radio.getCurrentRadioStation());
     }
+
     @Test
     void stationChangeIfStationIsMax() {
         Radio radio = new Radio();
@@ -21,6 +23,7 @@ class RadioTest {
         int expected = 0;
         assertEquals(expected, radio.getCurrentRadioStation());
     }
+
     @Test
     void stationChangeIfStationIsMin() {
         Radio radio = new Radio();
@@ -30,6 +33,7 @@ class RadioTest {
         int expected = 9;
         assertEquals(expected, radio.getCurrentRadioStation());
     }
+
     @Test
     void shouldChangeOnPreviousRadioStation() {
         Radio radio = new Radio();
@@ -39,14 +43,16 @@ class RadioTest {
         int expected = 0;
         assertEquals(expected, radio.getCurrentRadioStation());
     }
+
     @Test
-    void setCurrentStationMin () {
+    void setCurrentStationMin() {
         Radio radio = new Radio();
         int currentStation = 10;
         radio.setCurrentRadioStation(currentStation);
         int expected = 0;
         assertEquals(expected, radio.getCurrentRadioStation());
     }
+
     @Test
     void shouldChangeOnNextRadioStation() {
         Radio radio = new Radio();
@@ -56,6 +62,7 @@ class RadioTest {
         int expected = 9;
         assertEquals(expected, radio.getCurrentRadioStation());
     }
+
     @Test
     void setVolumeIfVolumeMax() {
         Radio radio = new Radio();
@@ -64,6 +71,7 @@ class RadioTest {
         int expected = 0;
         assertEquals(expected, radio.getVolume());
     }
+
     @Test
     void setVolumeIfVolumeMin() {
         Radio radio = new Radio();
@@ -72,6 +80,7 @@ class RadioTest {
         int expected = 0;
         assertEquals(expected, radio.getVolume());
     }
+
     @Test
     void changeVolumeIfVolumeIsAtMax() {
         Radio radio = new Radio();
@@ -81,6 +90,7 @@ class RadioTest {
         int expected = 10;
         assertEquals(expected, radio.getVolume());
     }
+
     @Test
     void changeVolumeIfVolumeIsAtMin() {
         Radio radio = new Radio();
@@ -91,6 +101,7 @@ class RadioTest {
         assertEquals(expected, radio.getVolume());
 
     }
+
     @Test
     void volumeUpForOne() {
         Radio radio = new Radio();
@@ -100,6 +111,7 @@ class RadioTest {
         int expected = 9;
         assertEquals(expected, radio.getVolume());
     }
+
     @Test
     void volumeDownForOne() {
         Radio radio = new Radio();
