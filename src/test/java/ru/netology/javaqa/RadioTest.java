@@ -9,14 +9,14 @@ class RadioTest {
 
     @Test
     public void setStation() {
-        Radio cond = new Radio(9);
-        Assertions.assertEquals(9, cond.getCurrentStation());
+        Radio cond = new Radio(10);
+        Assertions.assertEquals(0, cond.getCurrentStation());
     }
 
     @Test
     void setCurrentStation() {
         Radio radio = new Radio();
-        int currentStation = -2;
+        int currentStation = 10;
         radio.setCurrentRadioStation(currentStation);
         int expected = 0;
         assertEquals(expected, radio.getCurrentRadioStation());
