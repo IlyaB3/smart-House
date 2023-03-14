@@ -1,14 +1,22 @@
 package ru.netology.javaqa;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class RadioTest {
+
+    @Test
+    public void totalNumberOfRadioStations() {
+        Radio cond = new Radio(30);
+        Assertions.assertEquals(29, cond.getMaxRadioStation());
+    }
+
     @Test
     void setCurrentStation() {
         Radio radio = new Radio();
-        int currentStation = -2;
+        int currentStation = 10;
         radio.setCurrentRadioStation(currentStation);
         int expected = 0;
         assertEquals(expected, radio.getCurrentRadioStation());
@@ -66,9 +74,9 @@ class RadioTest {
     @Test
     void setVolumeIfVolumeMax() {
         Radio radio = new Radio();
-        int volume = 11;
+        int volume = 99;
         radio.setVolume(volume);
-        int expected = 0;
+        int expected = 99;
         assertEquals(expected, radio.getVolume());
     }
 
@@ -84,10 +92,10 @@ class RadioTest {
     @Test
     void changeVolumeIfVolumeIsAtMax() {
         Radio radio = new Radio();
-        int volume = 10;
+        int volume = 99;
         radio.setVolume(volume);
         radio.volumeUpForOne();
-        int expected = 10;
+        int expected = 99;
         assertEquals(expected, radio.getVolume());
     }
 
