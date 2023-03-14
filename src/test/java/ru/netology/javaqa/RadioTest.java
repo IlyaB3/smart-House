@@ -8,9 +8,9 @@ import static org.junit.jupiter.api.Assertions.*;
 class RadioTest {
 
     @Test
-    public void setStation() {
-        Radio cond = new Radio(10);
-        Assertions.assertEquals(0, cond.getCurrentStation());
+    public void totalNumberOfRadioStations() {
+        Radio cond = new Radio(30);
+        Assertions.assertEquals(29, cond.getMaxRadioStation());
     }
 
     @Test

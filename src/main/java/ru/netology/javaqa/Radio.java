@@ -10,22 +10,14 @@ public class Radio {
     private int volume;
 
 
-
-    public Radio(int currentStation) {
-        if (currentStation > maxRadioStation) {
-            return;
-        }
-        if (currentStation < minRadioStation) {
-            return;
-        }
-        this.currentStation = currentStation;
-    }
-
     public Radio() {
         this.currentStation = currentStation;
-
     }
 
+    public Radio(int quantityStation) {
+        maxRadioStation = minRadioStation + quantityStation - 1;
+
+    }
     public int getCurrentRadioStation() {
         return currentStation;
     }
